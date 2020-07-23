@@ -1,0 +1,3 @@
+module JuliaCoin
+
+end # module
