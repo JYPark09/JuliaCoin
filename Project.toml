@@ -2,3 +2,6 @@ name = "JuliaCoin"
 uuid = "e192a1bc-c54e-4b1b-808a-02905ec0b0f1"
 authors = ["Junyeong Park <jyp10987@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
