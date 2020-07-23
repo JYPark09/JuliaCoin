@@ -3,10 +3,10 @@ using Printf
 import Base: +, -, *, /, ^, ==, !=
 
 struct FieldElement
-    num::Int128
-    prime::Int128
+    num::BigInt
+    prime::BigInt
 
-    function FieldElement(num::Int128, prime::Int128)
+    function FieldElement(num::BigInt, prime::BigInt)
         @assert(num < prime && num >= 0, "Num not in field range")
 
         new(num, prime)
@@ -53,7 +53,7 @@ function /(lhs::FieldElement, rhs::FieldElement)
     FieldElement(num, lhs.prime)
 end
 
-function ^(lhs::FieldElement, exp::Int128)
+function ^(lhs::FieldElement, exp::BigInt)
     n = mod1(exp, lhs.prime - 1)
     num = mod1(lhs.num ^ n, lhs.prime)
     FieldElement(num, lhs.prime)
