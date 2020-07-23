@@ -21,7 +21,7 @@ function ==(lhs::FieldElement, rhs::FieldElement)
     lhs.num == rhs.num && lhs.prime == rhs.prime
 end
 
-function ==(lhs::FieldElement, rhs::FieldElement)
+function !=(lhs::FieldElement, rhs::FieldElement)
     !(lhs == rhs)
 end
 
